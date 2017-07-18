@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SoDBModelStoreContainer" CdmEntityContainer="SoDBEntities1">
+    <EntitySetMapping Name="Status_Lookup">
+      <EntityTypeMapping TypeName="SoDBModel.Status_Lookup">
+        <MappingFragment StoreEntitySet="Status_Lookup">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

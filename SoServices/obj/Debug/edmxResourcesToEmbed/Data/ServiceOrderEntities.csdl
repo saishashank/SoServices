@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiceOrderDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ServiceOrderDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="StatusLookups" EntityType="ServiceOrderDbModel.StatusLookup" />
+    <EntitySet Name="DealerInformations" EntityType="ServiceOrderDbModel.DealerInformation" />
+    <EntitySet Name="Locations" EntityType="ServiceOrderDbModel.Location" />
+    <EntitySet Name="ServicesProvideds" EntityType="ServiceOrderDbModel.ServicesProvided" />
+    <EntitySet Name="TransmissionLookups" EntityType="ServiceOrderDbModel.TransmissionLookup" />
+    <EntitySet Name="UserDetails" EntityType="ServiceOrderDbModel.UserDetail" />
+    <EntitySet Name="UserScheduleDetails" EntityType="ServiceOrderDbModel.UserScheduleDetail" />
+    <EntitySet Name="UserServiceOrderDetails" EntityType="ServiceOrderDbModel.UserServiceOrderDetail" />
+    <EntitySet Name="Vehicles" EntityType="ServiceOrderDbModel.Vehicle" />
+  </EntityContainer>
+  <EntityType Name="StatusLookup">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="StatusDesc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DealerInformation">
+    <Key>
+      <PropertyRef Name="DealerId" />
+    </Key>
+    <Property Name="DealerId" Type="Int32" Nullable="false" />
+    <Property Name="LocationId" Type="Int32" Nullable="false" />
+    <Property Name="DealerAddress" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Longitude" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Latitude" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" />
+    <Property Name="LocationName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ServicesProvided">
+    <Key>
+      <PropertyRef Name="ServicesId" />
+    </Key>
+    <Property Name="ServicesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceDesc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TransmissionLookup">
+    <Key>
+      <PropertyRef Name="TransmissionId" />
+    </Key>
+    <Property Name="TransmissionId" Type="Int32" Nullable="false" />
+    <Property Name="TransmissionType" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="CellPhone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="DLNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="AddressLine1" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="AddressLine2" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ZipCode" Type="Int32" Nullable="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="IsDealer" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserScheduleDetail">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ScheduleDetails" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserServiceOrderDetail">
+    <Key>
+      <PropertyRef Name="ServiceOrderId" />
+    </Key>
+    <Property Name="ServiceOrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="VehicleId" Type="Int32" Nullable="false" />
+    <Property Name="DealerId" Type="Int32" Nullable="false" />
+    <Property Name="ServicesOpted" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ScheduleId" Type="Int32" Nullable="false" />
+    <Property Name="ScheduleDetails" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="VehicleId" />
+    </Key>
+    <Property Name="VehicleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Make" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TransmissionId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="VIN" Type="Int32" />
+  </EntityType>
+</Schema>

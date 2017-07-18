@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiceOrderDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DealerInformation">
+    <Key>
+      <PropertyRef Name="DealerId" />
+    </Key>
+    <Property Name="DealerId" Type="int" Nullable="false" />
+    <Property Name="LocationId" Type="int" Nullable="false" />
+    <Property Name="DealerAddress" Type="nchar" MaxLength="100" />
+    <Property Name="Longitude" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Latitude" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="int" Nullable="false" />
+    <Property Name="LocationName" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicesProvided">
+    <Key>
+      <PropertyRef Name="ServicesId" />
+    </Key>
+    <Property Name="ServicesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceDesc" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusLookup">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="StatusDesc" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransmissionLookup">
+    <Key>
+      <PropertyRef Name="TransmissionId" />
+    </Key>
+    <Property Name="TransmissionId" Type="int" Nullable="false" />
+    <Property Name="TransmissionType" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="FirstName" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="LastName" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmailAddress" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="CellPhone" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="DLNumber" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="AddressLine1" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="AddressLine2" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="ZipCode" Type="int" Nullable="false" />
+    <Property Name="City" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="State" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsDealer" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserScheduleDetails">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScheduleDetails" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserServiceOrderDetails">
+    <Key>
+      <PropertyRef Name="ServiceOrderId" />
+    </Key>
+    <Property Name="ServiceOrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+    <Property Name="DealerId" Type="int" Nullable="false" />
+    <Property Name="ServicesOpted" Type="nchar" MaxLength="30" />
+    <Property Name="Comments" Type="nchar" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ScheduleDetails" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehicles">
+    <Key>
+      <PropertyRef Name="VehicleId" />
+    </Key>
+    <Property Name="VehicleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Model" Type="nchar" MaxLength="10" />
+    <Property Name="Year" Type="nchar" MaxLength="10" />
+    <Property Name="Color" Type="nchar" MaxLength="10" />
+    <Property Name="TransmissionId" Type="int" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="VIN" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ServiceOrderDbModelStoreContainer">
+    <EntitySet Name="DealerInformation" EntityType="Self.DealerInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesProvided" EntityType="Self.ServicesProvided" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusLookup" EntityType="Self.StatusLookup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransmissionLookup" EntityType="Self.TransmissionLookup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserScheduleDetails" EntityType="Self.UserScheduleDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserServiceOrderDetails" EntityType="Self.UserServiceOrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehicles" EntityType="Self.Vehicles" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

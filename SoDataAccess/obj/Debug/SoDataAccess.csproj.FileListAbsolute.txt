@@ -1,0 +1,14 @@
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\SoDataAccess.dll.config
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\SoDataAccess.dll
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\SoDataAccess.pdb
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\EntityFramework.dll
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\EntityFramework.xml
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\obj\Debug\SoDataAccess.dll
+c:\users\nalabans\documents\visual studio 2015\Projects\SoServices\SoDataAccess\obj\Debug\SoDataAccess.pdb
+C:\Users\nalabans\Documents\Visual Studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\App_Data\SoDatabase.mdf
+C:\Users\nalabans\Documents\Visual Studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\App_Data\SoDatabase_log.ldf
+C:\Users\nalabans\Documents\Visual Studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\SoDatabase.mdf
+C:\Users\nalabans\Documents\Visual Studio 2015\Projects\SoServices\SoDataAccess\bin\Debug\SoDatabase_log.ldf
+C:\Users\nalabans\Documents\Visual Studio 2015\Projects\SoServices\SoDataAccess\obj\Debug\SoDataAccess.csprojResolveAssemblyReference.cache

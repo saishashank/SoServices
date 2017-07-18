@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="19d9eb6f239344698d309e29cd5eecc5" Name="Diagram1" >
+        <EntityTypeShape EntityType="ServiceOrderDbModel.StatusLookup" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.DealerInformation" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.Location" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.ServicesProvided" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.TransmissionLookup" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.UserDetail" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.UserScheduleDetail" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.UserServiceOrderDetail" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ServiceOrderDbModel.Vehicle" Width="1.5" PointX="4.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
